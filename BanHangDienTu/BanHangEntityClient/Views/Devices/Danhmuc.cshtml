@@ -1,0 +1,509 @@
+﻿
+@{
+    ViewBag.Title = "Danh mục";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model dynamic
+@{
+    string title = Model.title;
+    var typelist = Model.typelist;
+    var devlist = Model.devlist;
+    int pages = Model.pages;
+    int currentpage = Model.currentpage;
+    string catalog = Model.cataglog;
+    string checkedtype = Model.checkedtype;
+    decimal fromprice = Model.fromprice;
+    decimal toprice = Model.toprice;
+    string sort = Model.sort;
+}
+
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+
+<div class="container-fluid body-content">
+    <div class="d-flex flex-row px-0">
+        <div class="d-flex flex-column" style="width: 20%">
+            <div class="p-1 border border-secondary mr-4 rounded" style="background-color: aliceblue" id="types">
+                <label class="font-weight-bold text-uppercase pt-2 px-2" style="font-size: 16px">Loại</label><br />
+                @{ int j = 1;}
+                @foreach (var type in typelist)
+                {
+                    <div class="p-1"></div>
+                    <div class="pl-5 custom-control custom-checkbox">
+                        @if (type == checkedtype)
+                        {
+                            <input type="checkbox" checked class="custom-control-input" id="dm-@j" name="" value="@type">
+                        }
+                        else
+                        {
+                            <input type="checkbox" class="custom-control-input" id="dm-@j" name="" value="@type" onchange="onlyCheckOne('dm-@j')">
+                        }
+                        <label class="custom-control-label" for="dm-@j">@type</label>
+                    </div>
+                    j++;
+                }
+                <div class="p-2"></div>
+            </div>
+            <div class="py-2"></div>
+            <div class="p-1 border border-secondary mr-4 rounded" style="background-color: aliceblue">
+                <label class="font-weight-bold text-uppercase pt-2 px-2" style="font-size: 16px">Mức giá</label><br />
+                <label class="font-weight-bold px-2">Từ</label><br />
+                @if (fromprice != -1)
+                {
+                    <input style="width: 85%" class="form-control px-1 ml-3" type="number" step="50000" min="0" id="fromprice" value="@fromprice" />
+                }
+                else
+                {
+                    <input style="width: 85%" class="form-control px-1 ml-3" type="number" step="50000" min="0" id="fromprice" />
+                }
+                <label class="font-weight-bold pt-2 px-2">Đến</label><br />
+                @if (toprice != -1)
+                {
+                    <input style="width: 85%" class="form-control px-1 ml-3" type="number" step="50000" min="0" id="toprice" value="@toprice" />
+                }
+                else
+                {
+                    <input style="width: 85%" class="form-control px-1 ml-3" type="number" step="50000" min="0" id="toprice" />
+                }
+                <div class="p-2"></div>
+            </div>
+            <div class="py-2"></div>
+            <button class="btn btn-info p-2 mr-4 font-weight-bold text-uppercase" style="font-size: 18px" onclick="checkMoney()">Lọc</button>
+            <div class="py-2"></div>
+        </div>
+        <div class="" style="width: 80% ">
+            <div class="jumbotron text-center w-100" style="background: url(../../Images/jumbotron_laptop.jfif) bottom fixed no-repeat; background-size: cover; height: 180px; border: 2px groove #1200ff">
+                <label class="display-4 font-weight-bold text-warning" style="font-family: 'Sitka Subheading';">
+                    @title
+                </label>
+            </div>
+
+            <div class="d-flex flex-row w-100 justify-content-end">
+                <div class="form-group w-50 text-right px-3 py-1">
+                    <select class="custom-select border border-secondary" id="sort" onchange="sort()">
+                        <option value="id">[Sắp xếp theo]</option>
+                        @if (sort == "asc")
+                        {
+                            <option value="asc" selected>Giá từ thấp đến cao</option>
+                        }
+                        else
+                        {
+                            <option value="asc">Giá từ thấp đến cao</option>
+                        }
+                        @if (sort == "des")
+                        {
+                            <option value="des" selected>Giá từ cao đến thấp</option>
+                        }
+                        else
+                        {
+                            <option value="des">Giá từ cao đến thấp</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center">
+                <!-- 4 sản phẩm trên 1 dòng -->
+                <div class="card-deck pb-5">
+                    @{ var i = 0; }
+                    @foreach (var device in devlist)
+                    {
+                        if (i < 4)
+                        {
+                            <form class="card text-decoration-none text-dark h-80" method="post" style="height: 300px; width: 260px">
+                                <div class="card-body h-60 p-1">
+                                    <img class="card-img-top" src="~/Images/Products/@device.image" alt="@device.name" style="width: 100%; height: 100%">
+                                    <div class="card-img-overlay d-flex align-items-end p-0" style="height: 210px">
+                                        <div class="text-center w-100 p-2" style="background-color: rgba(0, 0, 0, 0.20)">
+                                            @if (device.amount != 0)
+                                            {
+                                                <button type="button" value="@device.id" class="btn btn-danger px-3 addtocart" data-toggle="tooltip" data-placement="top">
+                                                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ
+                                                </button>
+
+                                                <button formaction="@Url.Action("ChiTietSanPham", "Devices", new { id = @device.id })" type="submit" class="btn btn-warning px-3" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                            }
+                                            else
+                                            {
+                                                <button formaction="@Url.Action("ChiTietSanPham", "Devices", new { id = @device.id })" type="submit" class="btn btn-warning px-3" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                                    <i class="fa fa-eye"></i> Xem chi tiết
+                                                </button>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer h-20">
+                                    <p class="card-title font-weight-bolder text-truncate mb-1" style="font-size: 18px">@device.name</p>
+                                    @if (device.amount != 0)
+                                    {
+                                        <p class="card-text text-black-50">@Convert.ToString(string.Format("{0:#,##0VNĐ}", @device.price))</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="card-text text-danger">HẾT HÀNG</p>
+                                    }
+                                </div>
+                            </form>
+                        }
+                        i++;
+                        if (i >= 4)
+                        {
+                            break;
+                        }
+                    }
+                </div>
+                <!-- 4 sản phẩm trên 1 dòng -->
+                <div class="card-deck pb-5">
+                    @{ i = 0; }
+                    @foreach (var device in devlist)
+                    {
+                        if (i >= 4 && i < 8)
+                        {
+                            <form class="card text-decoration-none text-dark h-80" method="post" style="height: 300px; width: 260px">
+                                <div class="card-body h-60 p-1">
+                                    <img class="card-img-top" src="~/Images/Products/@device.image" alt="@device.name" style="width: 100%; height: 100%">
+                                    <div class="card-img-overlay d-flex align-items-end p-0" style="height: 210px">
+                                        <div class="text-center w-100 p-2" style="background-color: rgba(0, 0, 0, 0.20)">
+                                            @if (device.amount != 0)
+                                            {
+                                                <button type="button" value="@device.id" class="btn btn-danger px-3 addtocart" data-toggle="tooltip" data-placement="top">
+                                                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ
+                                                </button>
+
+                                                <button formaction="@Url.Action("ChiTietSanPham", "Devices", new { id = @device.id })" type="submit" class="btn btn-warning px-3" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                            }
+                                            else
+                                            {
+                                                <button formaction="@Url.Action("ChiTietSanPham", "Devices", new { id = @device.id })" type="submit" class="btn btn-warning px-3" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                                    <i class="fa fa-eye"></i> Xem chi tiết
+                                                </button>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer h-20">
+                                    <p class="card-title font-weight-bolder text-truncate mb-1" style="font-size: 18px">@device.name</p>
+                                    @if (device.amount != 0)
+                                    {
+                                        <p class="card-text text-black-50">@Convert.ToString(string.Format("{0:#,##0VNĐ}", @device.price))</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="card-text text-danger">HẾT HÀNG</p>
+                                    }
+                                </div>
+                            </form>
+                        }
+                        i++;
+                        if (i >= 8)
+                        {
+                            break;
+                        }
+                    }
+                </div>
+                <!-- 4 sản phẩm trên 1 dòng -->
+                <div class="card-deck pb-5">
+                    @{ i = 0; }
+                    @foreach (var device in devlist)
+                    {
+                        if (i >= 8)
+                        {
+                            <form class="card text-decoration-none text-dark h-80" method="post" style="height: 300px; width: 260px">
+                                <div class="card-body h-60 p-1">
+                                    <img class="card-img-top" src="~/Images/Products/@device.image" alt="@device.name" style="width: 100%; height: 100%">
+                                    <div class="card-img-overlay d-flex align-items-end p-0" style="height: 210px">
+                                        <div class="text-center w-100 p-2" style="background-color: rgba(0, 0, 0, 0.20)">
+                                            @if (device.amount != 0)
+                                            {
+                                                <button type="button" value="@device.id" class="btn btn-danger px-3 addtocart" data-toggle="tooltip" data-placement="top">
+                                                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ
+                                                </button>
+
+                                                <button formaction="@Url.Action("ChiTietSanPham", "Devices", new { id = @device.id })" type="submit" class="btn btn-warning px-3" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                            }
+                                            else
+                                            {
+                                                <button formaction="@Url.Action("ChiTietSanPham", "Devices", new { id = @device.id })" type="submit" class="btn btn-warning px-3" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                                    <i class="fa fa-eye"></i> Xem chi tiết
+                                                </button>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer h-20">
+                                    <p class="card-title font-weight-bolder text-truncate mb-1" style="font-size: 18px">@device.name</p>
+                                    @if (device.amount != 0)
+                                    {
+                                        <p class="card-text text-black-50">@Convert.ToString(string.Format("{0:#,##0VNĐ}", @device.price))</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="card-text text-danger">HẾT HÀNG</p>
+                                    }
+                                </div>
+                            </form>
+                        }
+                        i++;
+                    }
+                </div>
+            </div>
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center" style="margin:20px 0">
+                @if (sort != "id")
+                {
+                    if (checkedtype != "" && fromprice == -1 && toprice == -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype != "" && fromprice != -1 && toprice == -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromprice = fromprice, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromprice = fromprice, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromprice = fromprice, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype != "" && fromprice == -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, toprice = toprice, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, toprice = toprice, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, toprice = toprice, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype != "" && fromprice != -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromrice = fromprice, toprice = toprice, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromrice = fromprice, toprice = toprice, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromrice = fromprice, toprice = toprice, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype == "" && fromprice != -1 && toprice == -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype == "" && fromprice == -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, toprice = toprice, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, toprice = toprice, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, toprice = toprice, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype == "" && fromprice != -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, toprice = toprice, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, toprice = toprice, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, toprice = toprice, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, sort = sort, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, sort = sort, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, sort = sort, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                }
+                else
+                {
+                    if (checkedtype != "" && fromprice == -1 && toprice == -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype != "" && fromprice != -1 && toprice == -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromprice = fromprice, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromprice = fromprice, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromprice = fromprice, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype != "" && fromprice == -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, toprice = toprice, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, toprice = toprice, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, toprice = toprice, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype != "" && fromprice != -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromrice = fromprice, toprice = toprice, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromrice = fromprice, toprice = toprice, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, type = checkedtype, fromrice = fromprice, toprice = toprice, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype == "" && fromprice != -1 && toprice == -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype == "" && fromprice == -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, toprice = toprice, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, toprice = toprice, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, toprice = toprice, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else if (checkedtype == "" && fromprice != -1 && toprice != -1)
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, toprice = toprice, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, toprice = toprice, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, fromrice = fromprice, toprice = toprice, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                    else
+                    {
+                        if (currentpage != 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, page = currentpage - 1 })"><i class="fa fa-angle-left"></i></a></li>
+                        }
+                        for (int k = 1; k <= pages; k++)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, page = @k })">@k</a></li>
+                        }
+                        if (currentpage != pages)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Danhmuc", "Devices", new { catalog = catalog, page = currentpage + 1 })"><i class="fa fa-angle-right"></i></a></li>
+                        }
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Danhmuc.js"></script>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThietBiDienTuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BillOfLading">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="receiverName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="shipDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Invoice" Relationship="Self.FK__BillOfLad__invoi__34C8D9D1" FromRole="BillOfLading" ToRole="Invoice" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="totalMoney" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="createdDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BillOfLading" Relationship="Self.FK__BillOfLad__invoi__34C8D9D1" FromRole="Invoice" ToRole="BillOfLading" />
+  </EntityType>
+  <Association Name="FK__BillOfLad__invoi__34C8D9D1">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="BillOfLading" Type="Self.BillOfLading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillOfLading">
+        <PropertyRef Name="invoice_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BillOfLading" EntityType="Self.BillOfLading" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" />
+    <AssociationSet Name="FK__BillOfLad__invoi__34C8D9D1" Association="Self.FK__BillOfLad__invoi__34C8D9D1">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="BillOfLading" EntitySet="BillOfLading" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

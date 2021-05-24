@@ -1,0 +1,95 @@
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.exe
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.deps.json
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.runtimeconfig.json
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.pdb
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.ChiTietHoaDon.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Combo.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Customer.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Delivery.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Device.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Employee.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.HoaDon.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.ListDelivery.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.Login.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Main.resources
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.GenerateResource.cache
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.dll
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.pdb
+C:\Users\ADMIN\Desktop\PhanLop\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.genruntimeconfig.cache
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.exe
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.deps.json
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.runtimeconfig.json
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.runtimeconfig.dev.json
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.pdb
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csprojAssemblyReference.cache
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.ChiTietHoaDon.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Combo.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Customer.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Delivery.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Device.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Employee.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.HoaDon.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.ListDelivery.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.Login.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Main.resources
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.GenerateResource.cache
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.AssemblyInfoInputs.cache
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.AssemblyInfo.cs
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.CoreCompileInputs.cache
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.CopyComplete
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.dll
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.pdb
+D:\Thuận\XD MHPL\BanHangEntityClient\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.genruntimeconfig.cache
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.exe
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.deps.json
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.runtimeconfig.json
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.runtimeconfig.dev.json
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\QuanLyBanHang.pdb
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csprojAssemblyReference.cache
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.ChiTietHoaDon.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Customer.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Delivery.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Device.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Employee.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.HoaDon.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.ListDelivery.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.Login.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.GUI.Main.resources
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.GenerateResource.cache
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.AssemblyInfoInputs.cache
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.AssemblyInfo.cs
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.CoreCompileInputs.cache
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.csproj.CopyComplete
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.dll
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.pdb
+D:\Desktop\BanHangDienTu\QuanLyBanHang\obj\Debug\netcoreapp3.1\QuanLyBanHang.genruntimeconfig.cache

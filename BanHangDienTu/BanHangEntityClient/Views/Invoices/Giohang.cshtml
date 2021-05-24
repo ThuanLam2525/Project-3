@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewBag.Title = "Giohang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using BanHangEntityClient.Models;
+@{ 
+    decimal total = 0;
+}
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(() => {
+            //Remove item from Cart
+            $(".rm-btn").click(function() {
+                const cartItemID = $(this).val();
+                const typeItem = $(this).data("type");
+                
+                $.post("@Url.Action("RemovefromCart", "Invoices")", { id: cartItemID, type: typeItem },
+                    function (data) {
+                        $('#row-device-' + cartItemID).fadeOut('slow');
+                        alert(data);
+                        location.reload();
+                    }
+                );
+            });
+
+            //Update Cart
+            $(".quanlity_item").change(function () {
+                const cartItemID = $(this).data("id");
+                const quantityItem = $(this).val();
+                const typeItem = $(this).data("type");
+                
+                if (quantityItem < 1) {
+                    $(this).val("1");
+                    return;
+                }
+
+                $.post("@Url.Action("UpdateCart", "Invoices")", { id: cartItemID, quantity: quantityItem, type: typeItem},
+                    function (data) {
+                        alert(data);
+                        location.reload();
+                    }
+                );
+            });
+
+            //Thanh toán
+            $("#checkout").click(function () {
+                const userID = $(this).data("id") || -1;
+                const tongtien = $(this).data("tongtien");
+                //alert(userID);
+                if (userID == -1) {
+                    const wantLogin = confirm("Bạn chưa đăng nhập! Bạn có muốn đăng nhập?");
+                    if (wantLogin) {
+                        return location.href = "@Url.Action("Dangnhap", "Customers")";
+                    } else {
+                        return;
+                    }
+                }
+                if (tongtien <= 0)
+                        return alert("Bạn chưa có món hàng nào trong giỏ");
+                return location.href = "@Url.Action("Thanhtoan", "BillOfLadings")";
+            });
+        });
+    </script>    
+}
+
+<!-- GIỎ HÀNG -->
+<!-- The Modal -->
+<div class="min-vh-100">
+    <div class="modal d-block" id="shopping_cart" style="position: unset !important">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary"><i class="fa fa-shopping-cart pr-2"></i> GIỎ HÀNG</h4>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body h-100">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 35%">Sản phẩm</th>
+                                <th style="width: 10%">Số lượng</th>
+                                <th style="width: 20%">Đơn giá</th>
+                                <th style="width: 20%">Thành tiền</th>
+                                <th style="width: 15%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Session["CartDv"] == null && Session["CartCb"] == null)
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-danger text-center">
+                                        <h5>Giỏ hàng trống</h5>
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+                                if (Session["CartDv"] != null)
+                                {
+                                    foreach (CartDv item in (List<CartDv>)Session["CartDv"])
+                                    {
+                                        total += @item.Device.price * @item.Quantity;
+                                        decimal thanhtien = @item.Device.price * @item.Quantity;
+                                        <tr id="row-device-@item.Device.id">
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <img src="~/Images/Products/@item.Device.image" width="70" height="70" />
+                                                    </div>
+                                                    <div class="pl-2 align-self-center">
+                                                        @item.Device.name
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="vertical-align: middle">
+                                                <input type="number" class="form-control quanlity_item" min="1" value="@item.Quantity" data-id="@item.Device.id" data-type="thietbi" style="width: 80%" />
+                                            </td>
+                                            <td style="vertical-align: middle">@Convert.ToString(string.Format("{0:#,##0đ}", @item.Device.price))</td>
+                                            <td style="vertical-align: middle">@Convert.ToString(string.Format("{0:#,##0đ}", @thanhtien))</td>
+                                            <td class="text-center" style="vertical-align: middle">
+                                                <button type="button" class="btn btn-danger rm-btn" value="@item.Device.id" data-type="thietbi">Xóa</button>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                if (Session["CartCb"] != null)
+                                {
+                                    foreach (CartCb item in (List<CartCb>)Session["CartCb"])
+                                    {
+                                        total += @item.Combo.finalMoney * @item.Quantity;
+                                        decimal thanhtien = @item.Combo.finalMoney * @item.Quantity;
+                                        <tr id="row-device-@item.Combo.id">
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <img src="~/Images/ComboOffers.jpg" width="70" height="70" />
+                                                    </div>
+                                                    <div class="pl-2 align-self-center">
+                                                        @item.Combo.name
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="vertical-align: middle">
+                                                <input type="number" class="form-control quanlity_item" min="1" value="@item.Quantity" data-id="@item.Combo.id" data-type="combo" style="width: 80%" />
+                                            </td>
+                                            <td style="vertical-align: middle">@Convert.ToString(string.Format("{0:#,##0đ}", @item.Combo.finalMoney))</td>
+                                            <td style="vertical-align: middle">@Convert.ToString(string.Format("{0:#,##0đ}", @thanhtien))</td>
+                                            <td class="text-center" style="vertical-align: middle">
+                                                <button type="button" class="btn btn-danger rm-btn" value="@item.Combo.id" data-type="combo">Xóa</button>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr class="font-weight-bold" style="font-size: 18px">
+                                <td colspan="4" class="pt-4 text-right">Tổng cộng:</td>
+                                <td colspan="2" class="pt-4">@Convert.ToString(string.Format("{0:#,##0₫}", @total))</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer pr-5">
+                    <button id="checkout" class="btn btn-primary p-3 font-weight-bold" data-id="@Session["idCustomer"]" data-tongtien="@total">THANH TOÁN</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END -->

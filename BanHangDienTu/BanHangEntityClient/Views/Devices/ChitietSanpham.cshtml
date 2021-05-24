@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid body-content">
+    <div class="d-flex flex-column my-3 bg-light">
+        <div class="d-flex mb-3">
+            <!-- Left Side - Hình ảnh sản phẩm-->
+            <div class="p-2 w-50 text-center">
+                <img src="~/Images/Products/@Model.image" alt="product" width="60%" height="100%" />
+            </div>
+            <!-- END -->
+            <!-- Right Side - Thông tin sản phẩm -->
+            <div class="p-2 w-50">
+                <h3 class="font-weight-bold">@Model.name</h3>
+                <h4 class="py-2 text-danger font-weight-bold">@Convert.ToString(string.Format("{0:#,##0VNĐ}", @Model.price))</h4>
+                @if (Model.amount != 0)
+                {
+                    <div class="py-2 font-weight-bold">Tình trạng: <span class="text-primary" style="font-size: 20px">Còn hàng</span> </div>
+                }
+                else
+                {
+                    <div class="py-2 font-weight-bold">Tình trạng: <span class="text-primary" style="font-size: 20px">Hết hàng</span> </div>
+                }
+                @if (Model.amount != 0)
+                {
+                    <div class="py-4">
+                        <button value="@Model.id" class="btn btn-danger px-3 py-2 font-weight-bold addtocart"><i class="fa fa-shopping-cart pr-2"></i>THÊM VÀO GIỎ</button>
+                    </div>
+                }
+            </div>
+            <!-- END -->
+        </div>
+        <div class="mb-3 px-lg-5">
+            <!-- Thông tin chi tiết sản phẩm -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item font-weight-bold" style="font-size: 18px">
+                    <a href="#tab1" data-toggle="tab" class="nav-link active">Mô tả</a>
+                </li>
+            </ul>
+            <div class="tab-content py-3 min-vh-100">
+                <div class="tab-pane active" id="tab1">
+                    <p>@MvcHtmlString.Create(@Model.detail.Replace(";", "<br />"))</p>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    const hash = document.location.hash;
+                    const prefix = "tab_";
+                    if (hash) {
+                        $('.nav-tabs a[href="' + hash.replace(prefix, "") + '"]').tab('show');
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</div>

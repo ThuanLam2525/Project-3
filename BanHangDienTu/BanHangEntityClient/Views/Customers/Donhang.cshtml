@@ -1,0 +1,65 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid body-content">
+    <div class="d-flex min-vh-100">
+        <div class="w-25 my-2 mx-4 bg-light">
+            <h4 class="py-2 px-1">
+                Tài khoản của
+                @if (Session["name"] != null)
+                {
+                    <span>@Session["name"].ToString()</span>
+                }
+            </h4>
+            <ul class="nav flex-column" style="font-size: 18px">
+                <li class="nav-item m-2">
+                    @Html.ActionLink("Thông tin tài khoản", "Index", "Customers", null, new { @class = "nav-link p-2" })
+                </li>
+                <li class="nav-item m-2">
+                    @Html.ActionLink("Đơn hàng", "Donhang", "Customers", null, new { @class = "nav-link p-2 bg-primary text-light disabled" })
+                </li>
+                <li class="nav-item m-2">
+                    @Html.ActionLink("Đăng xuất", "Dangxuat", "Customers", null, new { @class = "nav-link p-2" })
+                </li>
+            </ul>
+        </div>
+        <div class="w-75 my-2 mx-4 bg-light">
+            <h4 class="py-2 px-1">Đơn hàng</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 10%">#</th>
+                        <th style="width: 20%">Ngày mua</th>
+                        <th style="width: 20%">Tổng hóa đơn</th>
+                        <th style="width: 20%">Trạng thái</th>
+                        <th style="width: 20%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int i = 1;
+                        foreach (var item in Model.invoiceList)
+                        {
+                            <tr>
+                                <td class="text-center">@i</td>
+                                <td>@item.createdDate.ToString("dd/MM/yyyy")</td>
+                                <td>@item.totalMoney.ToString("#,###đ")</td>
+                                <td>@item.status</td>
+                                <td>
+                                    <form>
+                                        <button class="btn btn-primary detail" type="submit" formaction="@Url.Action("ChitietDonhang", "Customers", new { @item.id })">Xem chi tiết</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

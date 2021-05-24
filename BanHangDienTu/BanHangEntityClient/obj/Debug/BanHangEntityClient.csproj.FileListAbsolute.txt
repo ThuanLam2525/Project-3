@@ -1,0 +1,249 @@
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\BanHangEntityClient.dll.config
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\BanHangEntityClient.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\BanHangEntityClient.pdb
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\csc.exe
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\csc.exe.config
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\csc.rsp
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\csi.exe
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\csi.exe.config
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\csi.rsp
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.AppContext.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Collections.Immutable.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Console.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Globalization.Calendars.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.Compression.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.FileSystem.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Net.Http.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Net.Sockets.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Reflection.Metadata.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.ValueTuple.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.XPath.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\vbc.exe
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\vbc.exe.config
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\vbc.rsp
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\VBCSCompiler.exe
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\roslyn\VBCSCompiler.exe.config
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\Antlr3.Runtime.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\Microsoft.Web.Infrastructure.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\Newtonsoft.Json.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Helpers.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Mvc.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Optimization.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Razor.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Deployment.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Razor.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\WebGrease.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\Newtonsoft.Json.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Helpers.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Mvc.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Razor.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Deployment.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Razor.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\System.Web.Optimization.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\Antlr3.Runtime.pdb
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.csprojAssemblyReference.cache
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.csproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.csproj.CopyComplete
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.pdb
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.SqlServer.dll
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.xml
+D:\Documents\Visual Studio 2019\Projects\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.SqlServer.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\BanHangEntityClient.dll.config
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\BanHangEntityClient.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\BanHangEntityClient.pdb
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\csc.exe
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\csc.exe.config
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\csc.rsp
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\csi.exe
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\csi.exe.config
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\csi.rsp
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.AppContext.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Console.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Net.Http.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\vbc.exe
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\vbc.exe.config
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\vbc.rsp
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\Antlr3.Runtime.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\EntityFramework.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\EntityFramework.SqlServer.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\Newtonsoft.Json.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Helpers.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Mvc.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Optimization.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Razor.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.WebPages.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\WebGrease.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\EntityFramework.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\EntityFramework.SqlServer.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\Newtonsoft.Json.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Helpers.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Mvc.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Razor.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.WebPages.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\System.Web.Optimization.xml
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\bin\Antlr3.Runtime.pdb
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\obj\Debug\BanHangEntityClient.csproj.CoreCompileInputs.cache
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\obj\Debug\BanHangEntityClient.csproj.CopyComplete
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\obj\Debug\BanHangEntityClient.dll
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\obj\Debug\BanHangEntityClient.pdb
+C:\Users\Dat\source\repos\WebApplication\BanHangEntityClient\obj\Debug\BanHangEntityClient.csprojAssemblyReference.cache
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\BanHangEntityClient.dll.config
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\BanHangEntityClient.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\BanHangEntityClient.pdb
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\csc.exe
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\csc.exe.config
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\csc.rsp
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\csi.exe
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\csi.exe.config
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\csi.rsp
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.AppContext.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Collections.Immutable.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Console.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Globalization.Calendars.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.Compression.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.FileSystem.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Net.Http.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Net.Sockets.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Reflection.Metadata.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.ValueTuple.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.XPath.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\vbc.exe
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\vbc.exe.config
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\vbc.rsp
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\VBCSCompiler.exe
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\roslyn\VBCSCompiler.exe.config
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\Antlr3.Runtime.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.SqlServer.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\Microsoft.Web.Infrastructure.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\Newtonsoft.Json.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Helpers.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Mvc.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Optimization.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Razor.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Deployment.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Razor.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\WebGrease.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\EntityFramework.SqlServer.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\Newtonsoft.Json.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Helpers.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Mvc.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Razor.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Deployment.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.WebPages.Razor.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\System.Web.Optimization.xml
+D:\Desktop\BanHangDienTu\BanHangEntityClient\bin\Antlr3.Runtime.pdb
+D:\Desktop\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.csprojAssemblyReference.cache
+D:\Desktop\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.csproj.CoreCompileInputs.cache
+D:\Desktop\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.csproj.CopyComplete
+D:\Desktop\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.dll
+D:\Desktop\BanHangDienTu\BanHangEntityClient\obj\Debug\BanHangEntityClient.pdb

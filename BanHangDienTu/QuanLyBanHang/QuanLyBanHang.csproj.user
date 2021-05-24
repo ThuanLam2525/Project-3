@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="GUI\ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Delivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Device.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\ListDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

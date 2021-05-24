@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThietBiDienTuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BillOfLading">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="receiverName" Type="nvarchar" MaxLength="70" />
+    <Property Name="address" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="shipDate" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="100" />
+    <Property Name="invoice_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="totalMoney" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="detail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__BillOfLad__invoi__34C8D9D1">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="BillOfLading" Type="Self.BillOfLading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillOfLading">
+        <PropertyRef Name="invoice_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ThietBiDienTuModelStoreContainer">
+    <EntitySet Name="BillOfLading" EntityType="Self.BillOfLading" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BillOfLad__invoi__34C8D9D1" Association="Self.FK__BillOfLad__invoi__34C8D9D1">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="BillOfLading" EntitySet="BillOfLading" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

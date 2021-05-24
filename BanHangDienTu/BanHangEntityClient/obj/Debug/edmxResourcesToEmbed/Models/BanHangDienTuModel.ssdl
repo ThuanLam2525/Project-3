@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThietBiDienTuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BillOfLading">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="receiverName" Type="nvarchar" MaxLength="70" />
+    <Property Name="address" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="shipDate" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="100" />
+    <Property Name="invoice_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Combo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="deviceList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="totalMoney" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="discount" Type="int" Nullable="false" />
+    <Property Name="finalMoney" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="amount" Type="int" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="sdt" Type="text" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="detail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="catalog" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="type" Type="nvarchar" MaxLength="200" />
+    <Property Name="amount" Type="int" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="text" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="sdt" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="totalMoney" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="detail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__BillOfLad__invoi__34C8D9D1">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="BillOfLading" Type="Self.BillOfLading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillOfLading">
+        <PropertyRef Name="invoice_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Invoice__custome__4AB81AF0">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ThietBiDienTuModelStoreContainer">
+    <EntitySet Name="BillOfLading" EntityType="Self.BillOfLading" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Combo" EntityType="Self.Combo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BillOfLad__invoi__34C8D9D1" Association="Self.FK__BillOfLad__invoi__34C8D9D1">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="BillOfLading" EntitySet="BillOfLading" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Invoice__custome__4AB81AF0" Association="Self.FK__Invoice__custome__4AB81AF0">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

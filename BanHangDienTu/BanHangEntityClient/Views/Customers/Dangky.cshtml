@@ -1,0 +1,87 @@
+﻿@model BanHangEntityClient.Models.Customer
+
+@{
+    ViewBag.Title = "Dangky";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<div class="container-fluid body-content">
+    <div class="d-flex min-vh-100">
+        <!-- Form Đăng ký -->
+        <div class="mx-4 my-1 bg-light" style="width: 60%">
+            <div class="d-flex flex-column px-lg-5 py-4">
+                <div class="p-2 font-weight-bold">
+                    <h5><i class="pr-2 fa fa-user-plus"></i><label>ĐĂNG KÝ</label></h5>
+                </div>
+
+                @using (Html.BeginForm("../Customers/Dangky", "Home", FormMethod.Post, new { @class = "w-100" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="d-flex flex-wrap">
+                        <div class="p-2 w-50">
+                            <div class="form-group">
+                                <label for="usr">Email:</label>
+                                @Html.TextBoxFor(m => m.username, "", new { @class = "form-control", @placeholder = "beyeu520@gmail.com" })
+                                @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                                @if(ViewBag.dupplicateMsg != null)
+                                {
+                                    <span class="text-danger">@ViewBag.dupplicateMsg</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="p-2 w-50">
+                            <div class="form-group">
+                                <label for="name">Họ và tên:</label>
+                                @Html.TextBoxFor(m => m.name, "", new { @class = "form-control", @placeholder = "Nguyễn Văn A" })
+                                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="p-2 w-50">
+                            <div class="form-group">
+                                <label for="pass">Password:</label>
+                                @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "*************" })
+                                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="p-2 w-50">
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại:</label>
+                                @Html.TextBoxFor(m => m.sdt, "", new { @type = "number", @class = "form-control", @placeholder = "0126530065" })
+                                @Html.ValidationMessageFor(model => model.sdt, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="p-2 w-100">
+                            <div class="form-group">
+                                <label for="address">Địa chỉ:</label>
+                                @Html.TextBoxFor(m => m.address, "", new { @class = "form-control", @placeholder = "12 Cookies p12, q12", @style = "max-width: 80%" })
+                                @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="p-2 w-100">
+                            <label>Bạn đã có tài khoản? Hãy&nbsp;</label><span>@Html.ActionLink("đăng nhập", "Dangnhap", "Customers")</span>
+                        </div>
+                        <div class="p-2 w-100 text-center">
+                            <button class="btn btn-primary py-3 w-50" type="submit">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- END Đăng ký -->
+    </div>
+</div>

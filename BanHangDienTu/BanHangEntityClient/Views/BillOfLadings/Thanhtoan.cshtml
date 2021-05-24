@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using BanHangEntityClient.Models;
+@{
+    decimal total = 0;
+    int i = 1;
+}
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $("#purchase").click(function () {
+                if ($("#recipient").val() == "" || $("#address").val() == "") {
+                    alert("Xin hãy điền đẩy đủ thông tin");
+                    return;
+                }
+                const ngNhan = $("#recipient").val();
+                const diachi = $("#address").val();
+                const tongcong = @total;
+                $.post("@Url.Action("Thanhtoan", "BillOfLadings")", { Nguoinhan: ngNhan, Diachi: diachi, Sum: tongcong },
+                    function (data) {
+                        alert(data);
+                        location.href = "@Url.Action("Index", "Devices")";
+                    }
+                );
+            });
+        });
+    </script>
+}
+
+<div class="container-fluid body-content">
+    <div class="d-flex min-vh-100">
+        <!-- Form Thông tin hóa đơn -->
+        <div class="my-1 mx-3 bg-light" style="width: 60%">
+            <div class="d-flex flex-column p-lg-5">
+                <div class="p-2 font-weight-bold">
+                    <h5>THÔNG TIN HÓA ĐƠN</h5>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="p-2 w-50">
+                        <div class="form-group">
+                            <label for="buyer">Người mua:</label>
+                            <input type="text" class="form-control" id="buyer" value="@Session["Name"]" readonly>
+                        </div>
+                    </div>
+                    <div class="p-2 w-50">
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="text" class="form-control" id="phone" value="@Session["Phone"]" readonly>
+                        </div>
+                    </div>
+                    <div class="p-2 w-50">
+                        <div class="form-group">
+                            <label for="recipient">Người nhận:</label>
+                            <input type="text" class="form-control" id="recipient" value="@Session["Name"]">
+                        </div>
+                    </div>
+                    <div class="p-2 w-50">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" value="@Session["Email"]" readonly>
+                        </div>
+                    </div>
+                    <div class="p-2 w-100">
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" class="form-control" id="address" value="@Session["Address"]" style="max-width: 95%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- Right Sile - Đơn hàng -->
+        <div class="mx-3 my-1 bg-light" style="width: 40%">
+            <div class="d-flex flex-column p-lg-5">
+                <div class="p-2 font-weight-bold">
+                    <h5>ĐƠN ĐẶT HÀNG</h5>
+                </div>
+                <div class="p-2">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 5%">#</th>
+                                <th style="width: 65%">Sản phẩm</th>
+                                <th style="width: 30%">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                if (Session["CartDv"] != null)
+                                {
+                                    foreach (CartDv item in (List<CartDv>)Session["CartDv"])
+                                    {
+                                        decimal thanhtien = @item.Device.price * @item.Quantity;
+                                        <tr>
+                                            <td>@i</td>
+                                            <td>@item.Device.name &nbsp; <span class="font-weight-bold">x</span><span class="font-weight-bold">@item.Quantity</span></td>
+                                            <td>@Convert.ToString(string.Format("{0:#,##0đ}", @thanhtien))</td>
+                                        </tr>
+                                        i++;
+                                        total += thanhtien;
+                                    }
+                                }
+                                if (Session["CartCb"] != null)
+                                {
+                                    foreach (CartCb item in (List<CartCb>)Session["CartCb"])
+                                    {
+                                        decimal thanhtien = @item.Combo.finalMoney * @item.Quantity;
+                                        <tr>
+                                            <td>@i</td>
+                                            <td>@item.Combo.name &nbsp; <span class="font-weight-bold">x</span><span class="font-weight-bold">@item.Quantity</span></td>
+                                            <td>@Convert.ToString(string.Format("{0:#,##0đ}", @thanhtien))</td>
+                                        </tr>
+                                        i++;
+                                        total += thanhtien;
+                                    }
+                                }
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th class="text-right" colspan="2">Tổng cộng</th>
+                                <th>@Convert.ToString(string.Format("{0:#,##0đ}", @total))</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="p-2">
+                    <button id="purchase" class="btn btn-primary py-4 w-100 font-weight-bold">THANH TOÁN</button>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+    </div>
+</div>

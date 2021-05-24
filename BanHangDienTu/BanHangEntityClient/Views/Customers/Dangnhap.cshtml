@@ -1,0 +1,72 @@
+﻿@model BanHangEntityClient.Models.Customer
+
+@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid body-content">
+    <div class="d-flex min-vh-100">
+        <!-- Form Đăng nhập -->
+        <div class="w-50 my-1 mx-4 bg-light">
+            <div class="d-flex flex-column p-lg-5">
+                <div class="p-2 font-weight-bold">
+                    <h5><i class="pr-2 fa fa-sign-in"></i><label>ĐĂNG NHẬP</label></h5>
+                </div>
+                @using (Html.BeginForm("../Customers/Dangnhap", "Home", FormMethod.Post, new { @class = "w-100" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="p-2">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+                            @Html.TextBoxFor(m => m.username, "", new { @class = "form-control", @placeholder = "beyeu520@gmail.com" })
+                            <label class="my-auto">
+                                @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger pl-2" })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            </div>
+                            @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "**************" })
+                            <label class="my-auto">
+                                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger pl-2" })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="d-flex">
+                            <div class="px-2">
+                                <div class="custom-control custom-checkbox text-secondary">
+                                    <input type="checkbox" class="custom-control-input" id="rememberPass">
+                                    <label class="custom-control-label" for="rememberPass">Nhớ mật khẩu</label>
+                                </div>
+                            </div>
+                            <div class="pl-5">
+                                <a href="#">Quên mật khẩu?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <label>Bạn chưa có tài khoản? Hãy&nbsp;</label><span>@Html.ActionLink("đăng ký", "Dangky", "Customers")</span>
+                    </div>
+                    <div class="p-2">
+                        <button class="btn btn-primary py-2">ĐĂNG NHẬP</button>
+                    </div>
+                    if (ViewBag.errorMsg != null)
+                    {
+                        <script type="text/javascript">
+                            alert("Đăng nhập thất bại. Xin hãy kiểm tra lại tên tài khoản và mật khẩu.");
+                        </script>
+                    }
+                }
+            </div>
+        </div>
+        <!-- END Đăng nhập -->
+    </div>
+</div>
+

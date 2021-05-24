@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ThietBiDienTuModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Device">
+      <EntityTypeMapping TypeName="ThietBiDienTuModel.Device">
+        <MappingFragment StoreEntitySet="Device">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="catalog" ColumnName="catalog" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

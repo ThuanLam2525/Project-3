@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/font-awesome.css")
+    @Styles.Render("~/Content/ihover.min.css")
+    @Scripts.Render("~/Scripts/jquery-3.5.1.js")
+    @Scripts.Render("~/bundles/modernizr")
+    @using BanHangEntityClient.Models;
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+
+    <style>
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.06);
+        }
+
+            .card:hover {
+                transition: 0.3s;
+                transform: scale(1.02);
+                box-shadow: 0 15px 25px rgba(0,0,0,.12), 0 8px 16px rgba(0,0,0,.06);
+                border-radius: 10px;
+                border-color: #424242;
+            }
+
+        .card-img-overlay {
+            opacity: 0;
+        }
+
+        .card:hover .card-img-overlay {
+            transition: 0.3s;
+            transform: scale(1.02);
+            opacity: 1;
+        }
+    </style>
+
+    <!-- Add to Cart -->
+    <script type="text/javascript">
+        $(document).ready(() => {
+            //CartDV
+            $(".addtocart").click(function () {
+                const productID = $(this).val();
+                //alert("Bạn chọn sản phẩm " + productID);
+                $.ajax({
+                    url: '@Url.Action("AddtoCart", "Invoices")',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify({ id: productID }),
+                    success: function (data) {
+                            alert("Thêm giỏ hàng thành công");
+                            $("#cart_count").text(data);
+                        },
+                    error: function (xhr) {
+                            alert("Thêm vào giỏ hàng thất bại");
+                        }
+                    });
+            });
+
+            //CartCB
+            $(".addtocartCombo").click(function () {
+                const comboID = $(this).val();
+                //alert("Bạn chọn sản phẩm " + comboID);
+                $.ajax({
+                    url: '@Url.Action("AddtoCartCombo", "Invoices")',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify({ id: comboID }),
+                    success: function (data) {
+                            alert("Thêm giỏ hàng thành công");
+                            $("#cart_count").text(data);
+                        },
+                    error: function (xhr) {
+                            alert("Thêm vào giỏ hàng thất bại");
+                        }
+                    });
+            });
+        });
+    </script>
+
+</head>
+
+<body class="container-fluid pl-0 pr-0 pt-0" style="background-color: #f5f5f5">
+    <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom border-bottom-2 border-primary">
+        <a class="navbar-brand" href="@Url.Action("Index", "Devices", null)" >
+            <img alt="logo" style="width: 150px" src="~/Images/Logo.png" />
+        </a>
+        <ul class="navbar-nav mr-auto font-weight-bold" style="font-size: 18px">
+            <li class="nav-item">
+                @Html.ActionLink("Laptop", "Danhmuc", "Devices", new { catalog = "Laptop" }, new { @class = "nav-link text-dark" })
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Máy bộ", "Danhmuc", "Devices", new { catalog = "Máy bộ" }, new { @class = "nav-link text-dark" })
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Linh kiện", "Danhmuc", "Devices", new { catalog = "Linh kiện" }, new { @class = "nav-link text-dark" })
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Phụ kiện", "Danhmuc", "Devices", new { catalog = "Phụ kiện" }, new { @class = "nav-link text-dark" })
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Tài khoản", "Index", "Customers", null, new { @class = "nav-link text-dark" })
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-5">
+            <li class="nav-item pr-5">
+                <form class="form-inline" onsubmit="return checkValue()">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Tìm kiếm..." style="min-width: 300px" id="searchtxt">
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form>
+                    <a class="btn btn-danger pr-2" href="@Url.Action("Giohang", "Invoices")">
+                        <i class="fa fa-shopping-cart"> </i>
+                        @{
+                            if (Session["CartDv"] == null && Session["CartCb"] == null)
+                            {
+
+                                <span id="cart_count" class="badge badge-secondary">0</span>
+                            }
+                            else
+                            {
+                                int countdv = 0;
+                                int countcb = 0;
+                                if (Session["CartDv"] != null)
+                                {
+                                    countdv = ((List<CartDv>)Session["CartDv"]).Count;
+                                }
+                                if (Session["CartCb"] != null)
+                                {
+                                    countcb = ((List<CartCb>)Session["CartCb"]).Count;
+                                }
+                                int tmp = countcb + countdv;
+                                <span id="cart_count" class="badge badge-secondary">
+                                    @tmp.ToString()
+                                </span>
+                            }
+                        }
+                    </a>
+                </form>
+            </li>
+        </ul>
+    </nav>
+       
+    <span class="p-2"></span>
+
+    @RenderBody()
+
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    
+    <script>
+        function checkValue() {
+            if ($("#searchtxt").val() == "") {
+                alert("Vui lòng nhập từ khóa vào ô tìm kiếm");
+                return false;
+            }
+            else {
+                search();
+            }
+        }
+
+        function search() {
+            var keyword = $("#searchtxt").val();
+
+            var url = "/Devices/TimKiem?keyword=" + keyword;
+            $.ajax({
+                type: "GET",
+                url: "/Devices/TimKiem",
+                data: {
+                    keyword: url.split("keyword=", 2)[1],
+                },
+                success: function (result) {
+                    window.location.href = url;
+                },
+                error: function (err) {
+                    alert("Đã có lỗi xảy ra!");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
